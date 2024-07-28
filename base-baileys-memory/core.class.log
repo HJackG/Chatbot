@@ -1,0 +1,56 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492235721413@s.whatsapp.net',
+    fromMe: false,
+    id: '3A91E31966880ACDBB21',
+    participant: undefined
+  },
+  messageTimestamp: 1722021741,
+  pushName: 'Nahi',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'hola',
+  from: '5492235721413'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_bcf970fc-12fe-4531-ba81-373586ffbb97',
+  keyword: 'key_3ded4374-1889-4e93-92bd-48eaf45469f2',
+  answer: 'Este mensaje envia un link a un drive',
+  options: {
+    media: 'https://drive.google.com/file/d/1ljrgIRWs-kop4rdgGvwLLronKxHaFlqt/view?usp=sharing.pdf',
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '18dc42ee0da57de7817c6e0523101bd5'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_cb4c4cf7-ff7c-47b7-bb87-7c2cad99c502',
+  keyword: 'ans_bcf970fc-12fe-4531-ba81-373586ffbb97',
+  answer: 'mandame a google: https://www.nuevocineradar.com.ar/es-AR',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '065c7d70f2b8472ebc4ac6dd7cbff6da'
+}

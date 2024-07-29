@@ -2,10 +2,10 @@
   key: {
     remoteJid: '5492235721413@s.whatsapp.net',
     fromMe: false,
-    id: '3A91E31966880ACDBB21',
+    id: '3AA294C97D48C0D8632A',
     participant: undefined
   },
-  messageTimestamp: 1722021741,
+  messageTimestamp: 1722216424,
   pushName: 'Nahi',
   broadcast: false,
   message: Message {
@@ -19,38 +19,294 @@
   from: '5492235721413'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_bcf970fc-12fe-4531-ba81-373586ffbb97',
-  keyword: 'key_3ded4374-1889-4e93-92bd-48eaf45469f2',
-  answer: 'Este mensaje envia un link a un drive',
-  options: {
-    media: 'https://drive.google.com/file/d/1ljrgIRWs-kop4rdgGvwLLronKxHaFlqt/view?usp=sharing.pdf',
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: false
-  },
-  refSerialize: '18dc42ee0da57de7817c6e0523101bd5'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_cb4c4cf7-ff7c-47b7-bb87-7c2cad99c502',
-  keyword: 'ans_bcf970fc-12fe-4531-ba81-373586ffbb97',
-  answer: 'mandame a google: https://www.nuevocineradar.com.ar/es-AR',
+  ref: 'ans_05095cb3-792f-45b0-b6db-fa090748605a',
+  keyword: 'key_3f0001bd-1ad7-4e94-be64-4f6804cb1e21',
+  answer: '¡Hola, muchas gracias por comunicarte con el cine Las Tipas San Francisco 🎬🎬!\n' +
+    '\n' +
+    '¿Cómo podemos ayudarte el día de hoy🤔? Te recordamos que esta es una *respuesta automática*, por favor respondé con uno de los siguientes *números*.\n' +
+    '\n' +
+    '1. Quiero saber la cartelera de esta semana🧾.\n' +
+    '2. Quiero saber el precio de las entradas💲.\n' +
+    '3. Quiero saber el precio de los combos🍿.\n' +
+    '4. Quiero saber las promociones vigentes🤙.\n' +
+    '5. ¿Cómo puedo obtener mis entradas🎟️? \n' +
+    '6. Quiero hacer un reclamo/devolución😕.\n' +
+    '7. Quiero contactarme con un representante👨‍💻.\n' +
+    '8. Si no encontrás tu consulta te pedimos que nos dejes tu recomendación para continuar mejorando💯.',
   options: {
     media: null,
     buttons: [],
-    capture: false,
+    capture: true,
     child: null,
     delay: 0,
     idle: null,
     ref: null,
     nested: [],
     keyword: {},
-    callback: false
+    callback: true
   },
-  refSerialize: '065c7d70f2b8472ebc4ac6dd7cbff6da'
+  refSerialize: '31c054b7594556b5cf1b1c863ddc7f83'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492235721413@s.whatsapp.net',
+    fromMe: false,
+    id: '3AF52EF495F0BEB97812',
+    participant: undefined
+  },
+  messageTimestamp: 1722216426,
+  pushName: 'Nahi',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '2',
+  from: '5492235721413'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492235721413@s.whatsapp.net',
+    fromMe: false,
+    id: '3A3F2E10B10783F3CBF2',
+    participant: undefined
+  },
+  messageTimestamp: 1722216648,
+  pushName: 'Nahi',
+  broadcast: false,
+  message: Message {
+    conversation: 'Combo pareja: balde cartón + 2 vasos de gaseosa de 650ml $9300\n' +
+      '\n' +
+      'Combo mediano: bolsa mediana + vaso de gaseosa 650ml $5500\n' +
+      '\n' +
+      'Combo balde: balde hexagonal + vaso de gaseosa de 650ml $7000\n' +
+      '\n' +
+      'Combo nachos: nachos con queso + vaso de gaseosa 650ml $7200\n' +
+      '\n' +
+      'Tené en cuenta que a tenés la opción de elegir el vaso de 1000ml, en ese caso se agrega un extra de $1000 al precio que se muestra anteriormente.',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Combo pareja: balde cartón + 2 vasos de gaseosa de 650ml $9300\n' +
+    '\n' +
+    'Combo mediano: bolsa mediana + vaso de gaseosa 650ml $5500\n' +
+    '\n' +
+    'Combo balde: balde hexagonal + vaso de gaseosa de 650ml $7000\n' +
+    '\n' +
+    'Combo nachos: nachos con queso + vaso de gaseosa 650ml $7200\n' +
+    '\n' +
+    'Tené en cuenta que a tenés la opción de elegir el vaso de 1000ml, en ese caso se agrega un extra de $1000 al precio que se muestra anteriormente.',
+  from: '5492235721413'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_05095cb3-792f-45b0-b6db-fa090748605a',
+  keyword: 'key_3f0001bd-1ad7-4e94-be64-4f6804cb1e21',
+  answer: '¡Hola, muchas gracias por comunicarte con el cine Las Tipas San Francisco 🎬🎬!\n' +
+    '\n' +
+    '¿Cómo podemos ayudarte el día de hoy🤔? Te recordamos que esta es una *respuesta automática*, por favor respondé con uno de los siguientes *números*.\n' +
+    '\n' +
+    '1. Quiero saber la cartelera de esta semana🧾.\n' +
+    '2. Quiero saber el precio de las entradas💲.\n' +
+    '3. Quiero saber el precio de los combos🍿.\n' +
+    '4. Quiero saber las promociones vigentes🤙.\n' +
+    '5. ¿Cómo puedo obtener mis entradas🎟️? \n' +
+    '6. Quiero hacer un reclamo/devolución😕.\n' +
+    '7. Quiero contactarme con un representante👨‍💻.\n' +
+    '8. Si no encontrás tu consulta te pedimos que nos dejes tu recomendación para continuar mejorando💯.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '31c054b7594556b5cf1b1c863ddc7f83'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492235721413@s.whatsapp.net',
+    fromMe: false,
+    id: '3A952F81A86A986E898B',
+    participant: undefined
+  },
+  messageTimestamp: 1722216750,
+  pushName: 'Nahi',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'hola',
+  from: '5492235721413'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492235721413@s.whatsapp.net',
+    fromMe: false,
+    id: '3A180DAB3AACF1411035',
+    participant: undefined
+  },
+  messageTimestamp: 1722216755,
+  pushName: 'Nahi',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'hola',
+  from: '5492235721413'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492235721413@s.whatsapp.net',
+    fromMe: false,
+    id: '3A71822400138CCD591D',
+    participant: undefined
+  },
+  messageTimestamp: 1722217013,
+  pushName: 'Nahi',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '5492235721413'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492235721413@s.whatsapp.net',
+    fromMe: false,
+    id: '3A8D78B52928F01FF3A8',
+    participant: undefined
+  },
+  messageTimestamp: 1722217049,
+  pushName: 'Nahi',
+  broadcast: false,
+  message: Message {
+    conversation: 'meny',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'meny',
+  from: '5492235721413'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_05095cb3-792f-45b0-b6db-fa090748605a',
+  keyword: 'key_3f0001bd-1ad7-4e94-be64-4f6804cb1e21',
+  answer: '¡Hola, muchas gracias por comunicarte con el cine Las Tipas San Francisco 🎬🎬!\n' +
+    '\n' +
+    '¿Cómo podemos ayudarte el día de hoy🤔? Te recordamos que esta es una *respuesta automática*, por favor respondé con uno de los siguientes *números*.\n' +
+    '\n' +
+    '1. Quiero saber la cartelera de esta semana🧾.\n' +
+    '2. Quiero saber el precio de las entradas💲.\n' +
+    '3. Quiero saber el precio de los combos🍿.\n' +
+    '4. Quiero saber las promociones vigentes🤙.\n' +
+    '5. ¿Cómo puedo obtener mis entradas🎟️? \n' +
+    '6. Quiero hacer un reclamo/devolución😕.\n' +
+    '7. Quiero contactarme con un representante👨‍💻.\n' +
+    '8. Si no encontrás tu consulta te pedimos que nos dejes tu recomendación para continuar mejorando💯.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '31c054b7594556b5cf1b1c863ddc7f83'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492235721413@s.whatsapp.net',
+    fromMe: false,
+    id: '3A1BE880123EC121AFD0',
+    participant: undefined
+  },
+  messageTimestamp: 1722217052,
+  pushName: 'Nahi',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '2',
+  from: '5492235721413'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492235721413@s.whatsapp.net',
+    fromMe: false,
+    id: '3A79B8A86AE14F9D9CC8',
+    participant: undefined
+  },
+  messageTimestamp: 1722217077,
+  pushName: 'Nahi',
+  broadcast: false,
+  message: Message {
+    conversation: 'jsod',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'jsod',
+  from: '5492235721413'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_05095cb3-792f-45b0-b6db-fa090748605a',
+  keyword: 'key_3f0001bd-1ad7-4e94-be64-4f6804cb1e21',
+  answer: '¡Hola, muchas gracias por comunicarte con el cine Las Tipas San Francisco 🎬🎬!\n' +
+    '\n' +
+    '¿Cómo podemos ayudarte el día de hoy🤔? Te recordamos que esta es una *respuesta automática*, por favor respondé con uno de los siguientes *números*.\n' +
+    '\n' +
+    '1. Quiero saber la cartelera de esta semana🧾.\n' +
+    '2. Quiero saber el precio de las entradas💲.\n' +
+    '3. Quiero saber el precio de los combos🍿.\n' +
+    '4. Quiero saber las promociones vigentes🤙.\n' +
+    '5. ¿Cómo puedo obtener mis entradas🎟️? \n' +
+    '6. Quiero hacer un reclamo/devolución😕.\n' +
+    '7. Quiero contactarme con un representante👨‍💻.\n' +
+    '8. Si no encontrás tu consulta te pedimos que nos dejes tu recomendación para continuar mejorando💯.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '31c054b7594556b5cf1b1c863ddc7f83'
 }

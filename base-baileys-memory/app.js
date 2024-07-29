@@ -12,7 +12,21 @@ const menu = fs.readFileSync(menu1Path, "utf8")
 const precioPath = path.join(__dirname, "mensajes", "preciosEntradas.txt")
 const precios = fs.readFileSync(precioPath, "utf8")
 
-const flowPrincipal = addKeyword(['hola', 'ole', 'alo']) // busca en el mensaje alguna de estas palabras claves
+const precioCombosPath = path.join(__dirname, "mensajes", "preciosCombos.txt")
+const preciosCombos = fs.readFileSync(precioCombosPath, "utf8")
+
+const promosPath = path.join(__dirname, "mensajes", "promos.txt")
+const promos = fs.readFileSync(promosPath, "utf8")
+
+const entradasPath = path.join(__dirname, "mensajes", "entradas.txt")
+const entradas = fs.readFileSync(entradasPath, "utf8")
+
+const fotoPath = path.join(__dirname, "cine.jpeg")
+const foto = fs.readFileSync(fotoPath, "utf8")
+
+let customerWithRepresentative = false;
+
+/*const flowPrincipal = addKeyword(['hola', 'ole', 'alo']) // busca en el mensaje alguna de estas palabras claves
     .addAnswer('🙌 Hola bienvenido a este *Chatbot*, te comunicaste con joaquin, lamentablemet esta opcupado trabajando',
         async (ctx, { flowDynamic, provider }) => { console.log('nn') }
     )
@@ -28,7 +42,7 @@ const flowPrincipal = addKeyword(['hola', 'ole', 'alo']) // busca en el mensaje 
         } catch (error) {
             console.log('Error sending media:');
         }
-    });
+    });*/
 
 const flowMensaje1 = addKeyword(EVENTS.ACTION)
     .addAnswer('Si tenés alguna otra consulta, te pedimos que ingreses la palabra *menú*')
@@ -50,27 +64,68 @@ const flowPreciosEntradas = addKeyword(EVENTS.ACTION)
         });
 
 const flowPreciosCombos = addKeyword(EVENTS.ACTION)
-    .addAnswer('')
+    .addAnswer(preciosCombos, {
+        delay: 1500,
+    },
+        async (ctx, { gotoFlow, fallBack, flowDynamic }) => {
+            return gotoFlow(flowMensaje1)
+        });
 
 const flowPromos = addKeyword(EVENTS.ACTION)
-    .addAnswer('')
+    .addAnswer(promos, {
+        delay: 1500,
+    },
+        async (ctx, { gotoFlow, fallBack, flowDynamic }) => {
+            return gotoFlow(flowMensaje1)
+        });
 
 const flowEntradas = addKeyword(EVENTS.ACTION)
+    .addAnswer(entradas, {
+        delay: 1500,
+    },
+        async (ctx, { gotoFlow, fallBack, flowDynamic }) => {
+            return gotoFlow(flowMensaje1)
+        });
+
+const flowDevolucion = addKeyword(EVENTS.ACTION)
     .addAnswer('')
 
 const flowRepresentante = addKeyword(EVENTS.ACTION)
-    .addAnswer('')
+    .addAnswer('Te pedimos que nos dejes tu consulta, en lo posible en un mensaje, y un representante se comunicará pronto. CONSULTA', 
+        { capture: true },
+        async (ctx, ctxFn) => {
+            customerWithRepresentative = true;
+            console.log(`Estado ${customerWithRepresentative}`);
+        });
 
 const flowRecomendacion = addKeyword(EVENTS.ACTION)
-    .addAnswer('')
+    .addAnswer('Después de este mensaje te pedimos que dejes tu recomendación en un solo mensaje, muchas gracias por contactarnos. MEJORA', { capture: true })
 
+const flowEnEspera = addKeyword(EVENTS.ACTION)
+    .addAnswer('Para acceder al menu nuevamente ingresá la palabra *menu*',
+        { capture: true },
+        async (ctx, { gotoFlow, fallBack, flowDynamic }) => {
+            if (ctx.body.toLowerCase() === 'menu') {
+                customerWithRepresentative = false;
+                return gotoFlow(flowMenu);
+            }
+        })
 
-const flowMenu = addKeyword([EVENTS.WELCOME, 'menu'])
-
+const flowMenu = addKeyword([EVENTS.WELCOME])
+    .addAction({
+        delay: 1000,
+    }, async (ctx, { gotoFlow, fallBack, flowDynamic }) => {
+        console.log(`Estado ${customerWithRepresentative}`);
+        if (customerWithRepresentative) {
+            console.log(`Estado ${customerWithRepresentative}`);
+            return gotoFlow(flowEnEspera);
+        }
+    })
     .addAnswer(menu,
         { capture: true },
         async (ctx, { gotoFlow, fallBack, flowDynamic }) => {
-            if (!['1', '2', '3', '4', '5', '6', '7'].includes(ctx.body)) {
+            console.log(`Estado ${customerWithRepresentative}`);
+            if (!['1', '2', '3', '4', '5', '6', '7', '8'].includes(ctx.body)) {
                 return fallBack(
                     'Respuesta no valida, por favor ingrese una de las opciones'
                 );
@@ -88,8 +143,10 @@ const flowMenu = addKeyword([EVENTS.WELCOME, 'menu'])
                 case '5':
                     return gotoFlow(flowEntradas);
                 case '6':
-                    return gotoFlow(flowRepresentante);
+                    return gotoFlow(flowDevolucion);
                 case '7':
+                    return gotoFlow(flowRepresentante);
+                case '8':
                     return gotoFlow(flowRecomendacion);
                 case '0':
                     return await flowDynamic(
@@ -101,7 +158,7 @@ const flowMenu = addKeyword([EVENTS.WELCOME, 'menu'])
 const main = async () => { // shift + option + f para ordenar el codigo
     try {
         const adapterDB = new MockAdapter();
-        const adapterFlow = createFlow([flowMenu, flowCartelera, flowPreciosEntradas, flowPreciosCombos, flowPromos, flowEntradas, flowRepresentante, flowRecomendacion, flowMensaje1]);
+        const adapterFlow = createFlow([flowMenu, flowCartelera, flowPreciosEntradas, flowPreciosCombos, flowPromos, flowEntradas, flowRepresentante, flowRecomendacion, flowMensaje1, flowEnEspera]);
         const adapterProvider = createProvider(BaileysProvider);
 
         createBot({
